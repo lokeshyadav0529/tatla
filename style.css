@@ -99,7 +99,7 @@ body {
 .btn {
   background: #4caf50;
   color: #fff;
-  padding: 14px 27px;
+  padding:14px 22px;
   border-radius: 30px;
   text-decoration: none
 }
@@ -1069,6 +1069,14 @@ html {
   .process-grid {
     grid-template-columns: 1fr;
   }
+}
+
+.btn {
+  background: #4caf50;
+  color: #fff;
+  padding:14px 22px;
+  border-radius: 30px;
+  text-decoration: none
 }
 
 
