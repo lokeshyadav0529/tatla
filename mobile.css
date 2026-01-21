@@ -1,0 +1,124 @@
+/* =========================
+   MOBILE RESET
+========================= */
+html, body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+/* =========================
+   DISABLE ALL ANIMATIONS
+========================= */
+*,
+*::before,
+*::after {
+  animation: none !important;
+  transition: none !important;
+  transform: none !important;
+}
+
+/* =========================
+   HEADER / NAV
+========================= */
+.main-header {
+  position: fixed;
+}
+
+.header-inner {
+  padding: 14px 16px;
+}
+
+.logo img {
+  height: 34px;
+}
+
+/* =========================
+   HERO SECTION
+========================= */
+.hero-slider {
+  height: 55vh;              /* compact hero */
+  padding-top: 60px;
+}
+
+.slide {
+  background-size: 130%;
+  background-position: center top;
+}
+
+.hero-text {
+  width: 100%;
+  padding: 0 16px;
+  text-align: center;
+  left: 50%;
+  top: 48%;
+  transform: translate(-50%, -50%);
+}
+
+.hero-text h1 {
+  font-size: 26px;
+  line-height: 1.3;
+}
+
+.hero-text p {
+  font-size: 13.5px;
+  margin-bottom: 16px;
+}
+
+.hero-text .btn {
+  padding: 11px 22px;
+  font-size: 14px;
+  border-radius: 26px;
+}
+
+/* =========================
+   REMOVE PARALLAX
+========================= */
+.parallax {
+  background-attachment: scroll !important;
+}
+
+/* =========================
+   SECTIONS SPACING
+========================= */
+section {
+  padding: 55px 16px;
+}
+
+/* =========================
+   ABOUT / SERVICES / GALLERY
+========================= */
+.about-grid,
+.services-grid,
+.gallery-grid,
+.process-grid,
+.trust-grid {
+  grid-template-columns: 1fr !important;
+}
+
+/* =========================
+   IMAGES
+========================= */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* =========================
+   FOOTER
+========================= */
+.footer-container {
+  grid-template-columns: 1fr;
+  text-align: center;
+}
+
+.footer-logo img {
+  height: 60px;
+}
+
+/* =========================
+   DISABLE CURSOR / EFFECTS
+========================= */
+.cursor,
+.cursor-ring {
+  display: none !important;
+}
