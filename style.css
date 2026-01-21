@@ -1195,6 +1195,10 @@ html {
   padding-top: 40px;
 }
 
+.hero-overlay {
+  background: transparent;
+}
+
 
 
 
