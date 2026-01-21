@@ -1151,6 +1151,24 @@ html {
     overflow: hidden;
   }
 }
+@media (max-width: 768px) {
+  .hero-text {
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    padding: 0 16px;
+    box-sizing: border-box;
+  }
+}
+@media (max-width: 768px) {
+  .reveal,
+  .reveal-left,
+  .reveal-right {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
 
 
 
