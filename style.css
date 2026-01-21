@@ -1100,21 +1100,46 @@ html {
     animation: none;
   }
 }
-@media(max-width:768px){
-  .hero-slider{
-    height: 70vh;          /* image chhoti hogi */
-    min-height: 520px;    /* text ke liye safe */
+@media (max-width: 768px) {
+  .hero-slider {
+    height: 60vh;          /* pehle 70vh tha → ab aur chhota */
+    padding-top: 60px;
   }
+}
+
 
   .slide{
     background-position: center top; /* image upar se dikhe */
   }
-}
+
 @media (max-width: 768px) {
   .slide {
-    background-size: 110%;   /* thoda zoom-out look */
+    background-size: 125%;     /* pehle 110% tha */
+    background-position: center top;
   }
 }
+@media (max-width: 768px) {
+  .hero-text {
+    top: 48%;                 /* pehle 50% */
+  }
+}
+@media (max-width: 768px) {
+  .hero-text h1 {
+    font-size: 26px;
+  }
+
+  .hero-text p {
+    font-size: 13.5px;
+  }
+
+  .hero-text .btn {
+    padding: 11px 22px;
+    font-size: 14px;
+  }
+}
+
+
+
 
 
 
