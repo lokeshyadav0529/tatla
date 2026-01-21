@@ -99,7 +99,7 @@ body {
 .btn {
   background: #4caf50;
   color: #fff;
-  padding: 14px 30px;
+  padding: 14px 27px;
   border-radius: 30px;
   text-decoration: none
 }
@@ -1070,4 +1070,5 @@ html {
     grid-template-columns: 1fr;
   }
 }
+
 
