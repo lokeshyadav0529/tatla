@@ -1168,6 +1168,33 @@ html {
     transform: none !important;
   }
 }
+/* HERO FIX – MOBILE */
+.hero-slider {
+  height: auto;
+  min-height: calc(100vh - 70px); /* header height minus */
+  padding-top: 70px;
+  padding-bottom: 40px;
+}
+.slide {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center center;
+}
+.hero-text {
+  position: relative;
+  top: auto;
+  left: auto;
+  transform: none;
+  margin-top: 80px;
+  padding: 0 16px;
+  text-align: center;
+}
+#about {
+  margin-top: 0 !important;
+  padding-top: 40px;
+}
+
 
 
 
