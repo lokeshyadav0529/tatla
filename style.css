@@ -1100,6 +1100,23 @@ html {
     animation: none;
   }
 }
+@media(max-width:768px){
+  .hero-slider{
+    height: 70vh;          /* image chhoti hogi */
+    min-height: 520px;    /* text ke liye safe */
+  }
+
+  .slide{
+    background-position: center top; /* image upar se dikhe */
+  }
+}
+@media (max-width: 768px) {
+  .slide {
+    background-size: 110%;   /* thoda zoom-out look */
+  }
+}
+
+
 
 
 
