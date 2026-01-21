@@ -140,28 +140,6 @@ document.querySelectorAll(".tilt").forEach(card => {
     card.style.transform = "rotateX(0) rotateY(0)";
   });
 });
-const isMobile = window.innerWidth <= 768;
-if (!isMobile) {
-  window.addEventListener("scroll", revealOnScroll);
-  window.addEventListener("load", revealOnScroll);
-}
-if (!isMobile && slides.length > 0) {
-  setInterval(() => {
-    slides[index].classList.remove("active");
-    index = (index + 1) % slides.length;
-    slides[index].classList.add("active");
-  }, 4000);
-}
-const slides = document.querySelectorAll(".slide");
-let index = 0;
-const isMobile = window.innerWidth <= 768;
 
-if (slides.length > 0) {
-  setInterval(() => {
-    slides[index].classList.remove("active");
-    index = (index + 1) % slides.length;
-    slides[index].classList.add("active");
-  }, isMobile ? 5000 : 4000); // mobile = slower
-}
 
 
