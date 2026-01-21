@@ -1143,6 +1143,15 @@ html {
     max-width: 100%;
   }
 }
+@media (max-width: 768px) {
+  .hero-slider,
+  .slide {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+  }
+}
+
 
 
 
