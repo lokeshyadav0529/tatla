@@ -1198,6 +1198,10 @@ html {
 .hero-overlay {
   background: transparent;
 }
+.hero-overlay {
+  background: rgba(0, 0, 0, 0.35);
+}
+
 
 
 
