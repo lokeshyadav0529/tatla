@@ -292,3 +292,50 @@ html, body {
 .footer-bottom {
   font-size: 13px;
 }
+/* ================= CONTACT FIX ================= */
+
+/* Allow full height */
+.contact-pro,
+.contact-container,
+.contact-right {
+  height: auto !important;
+  overflow: visible !important;
+}
+
+/* Stack properly */
+.contact-container {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: stretch;
+}
+
+/* Force form visibility */
+.contact-right {
+  width: 100%;
+  display: block;
+}
+
+/* Form proper spacing */
+.contact-form {
+  margin-top: 20px;
+}
+
+/* Inputs never hidden */
+.contact-form input,
+.contact-form textarea,
+.contact-form button {
+  display: block;
+  width: 100%;
+}
+
+/* Fix map pushing form */
+.contact-map {
+  margin-top: 40px;
+  width: 100%;
+}
+
+.contact-map iframe {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+}
