@@ -550,3 +550,7 @@ h2{
   height:360px;
   border:0;
 }
+.contact {
+  background: linear-gradient(180deg, #f4f8f4, #e8f5e9);
+}
+
