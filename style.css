@@ -1201,35 +1201,7 @@ html {
 .hero-overlay {
   background: rgba(0, 0, 0, 0.35);
 }
-/* =========================
-   FORCE REMOVE HERO SHADOW
-========================= */
 
-/* REMOVE OVERLAY COMPLETELY */
-.hero-overlay {
-  display: none !important;
-}
-
-/* REMOVE ANY BACKGROUND COLOR */
-.hero-slider {
-  background: transparent !important;
-}
-
-/* ENSURE SLIDE IS CLEAN */
-.slide {
-  background-color: transparent !important;
-  filter: none !important;
-  opacity: 1 !important;
-}
-
-/* REMOVE ANY PSEUDO SHADOW */
-.hero-slider::before,
-.hero-slider::after,
-.slide::before,
-.slide::after {
-  display: none !important;
-  content: none !important;
-}
 
 
 
