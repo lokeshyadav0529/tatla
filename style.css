@@ -1202,6 +1202,51 @@ html {
   background: rgba(0, 0, 0, 0.35);
 }
 
+/* =========================
+   MOBILE HERO – IMAGE FIT
+========================= */
+
+.hero-slider {
+  position: relative;
+  height: calc(100vh - 64px); /* header height */
+  padding-top: 64px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* SLIDE IMAGE */
+.slide {
+  position: absolute;
+  inset: 0;
+
+  background-repeat: no-repeat;
+  background-position: center top;   /* mobile-friendly */
+  background-size: contain;          /* MOST IMPORTANT */
+
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+/* ACTIVE SLIDE */
+.slide.active {
+  opacity: 1;
+}
+
+/* LIGHT OVERLAY (OPTIONAL) */
+.hero-overlay {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+/* HERO TEXT */
+.hero-text {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 0 16px;
+}
+
 
 
 
