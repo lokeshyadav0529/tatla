@@ -1,38 +1,73 @@
-/* LOADER */
-window.addEventListener("load",()=>{
-  const loader=document.getElementById("page-loader");
-  if(loader)setTimeout(()=>loader.style.display="none",300);
+/* ================= LOADER ================= */
+window.addEventListener("load", () => {
+  document.getElementById("page-loader").style.display = "none";
 });
 
-/* MENU */
-function toggleMenu(){
-  document.getElementById("navMenu").classList.toggle("active");
-}
-function closeMenu(){
-  document.getElementById("navMenu").classList.remove("active");
+/* ================= HERO SLIDER ================= */
+let slides = document.querySelectorAll(".slide");
+let index = 0;
+
+setInterval(() => {
+  slides[index].classList.remove("active");
+  index = (index + 1) % slides.length;
+  slides[index].classList.add("active");
+}, 4000);
+
+/* ================= MOBILE MENU ================= */
+function toggleMenu() {
+  document.getElementById("navMenu").classList.toggle("show");
 }
 
-/* HERO SLIDER */
-const slides=document.querySelectorAll(".slide");
-let i=0;
-setInterval(()=>{
-  slides[i].classList.remove("active");
-  i=(i+1)%slides.length;
-  slides[i].classList.add("active");
-},5000);
-
-/* LIGHTBOX */
-function openLightbox(src){
-  document.getElementById("lightbox").style.display="flex";
-  document.getElementById("lightbox-img").src=src;
-}
-function closeLightbox(){
-  document.getElementById("lightbox").style.display="none";
+function closeMenu() {
+  document.getElementById("navMenu").classList.remove("show");
 }
 
-/* WHATSAPP */
-function sendWhatsApp(){
-  const n=name.value,m=mobile.value,msg=message.value;
-  const text=`🌿 New Enquiry – TATLA AGRO\nName:${n}\nMobile:${m}\nMessage:${msg}`;
-  window.open("https://wa.me/917878800305?text="+encodeURIComponent(text));
+/* ================= SCROLL PROGRESS ================= */
+window.addEventListener("scroll", () => {
+  let scrollTop = document.documentElement.scrollTop;
+  let height =
+    document.documentElement.scrollHeight -
+    document.documentElement.clientHeight;
+  document.getElementById("progress-bar").style.width =
+    (scrollTop / height) * 100 + "%";
+});
+
+/* ================= REVEAL ANIMATION ================= */
+const reveals = document.querySelectorAll(".reveal");
+
+window.addEventListener("scroll", () => {
+  reveals.forEach((r) => {
+    let top = r.getBoundingClientRect().top;
+    if (top < window.innerHeight - 100) {
+      r.classList.add("active");
+    }
+  });
+});
+
+/* ================= LIGHTBOX ================= */
+function openLightbox(src) {
+  let box = document.createElement("div");
+  box.style.cssText = `
+    position:fixed;inset:0;
+    background:rgba(0,0,0,0.9);
+    display:flex;justify-content:center;align-items:center;
+    z-index:9999;
+  `;
+  box.innerHTML = `<img src="${src}" style="max-width:90%;max-height:90%">`;
+  box.onclick = () => box.remove();
+  document.body.appendChild(box);
+}
+
+/* ================= WHATSAPP ================= */
+function sendWhatsApp() {
+  let name = document.getElementById("name").value;
+  let mobile = document.getElementById("mobile").value;
+  let msg = document.getElementById("message").value;
+
+  let url = `https://wa.me/917878800305?text=
+Name: ${name}%0A
+Mobile: ${mobile}%0A
+Message: ${msg}`;
+
+  window.open(url, "_blank");
 }
