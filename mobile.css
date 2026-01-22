@@ -221,3 +221,58 @@ header {
   color: #fff;
   white-space: nowrap;
 }
+/* =========================
+   MOBILE HEADER – FINAL FIX
+========================= */
+
+/* RESET BODY OVERFLOW */
+body {
+  overflow-x: hidden;
+}
+
+/* HEADER FULL WIDTH */
+header {
+  width: 100%;
+  padding: 0;
+}
+
+/* HEADER INNER */
+.header-inner {
+  width: 100%;
+  max-width: 100%;
+  padding: 14px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+/* LOGO */
+.logo {
+  font-size: 18px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+/* REMOVE HAMBURGER */
+.menu-icon {
+  display: none !important;
+}
+
+/* NAV MENU */
+.nav-menu {
+  display: flex !important;
+  position: static;
+  flex-direction: row;
+  gap: 12px;
+  background: transparent;
+  padding: 0;
+}
+
+/* NAV LINKS */
+.nav-menu a {
+  font-size: 13px;
+  padding: 0;
+  color: #fff;
+  white-space: nowrap;
+}
