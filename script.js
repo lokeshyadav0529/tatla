@@ -158,6 +158,23 @@ if (slides.length > 0) {
     slides[index].classList.add("active");
   }, 5000);
 }
+/* FORCE REMOVE LOADER (SAFE) */
+window.addEventListener("load", () => {
+  const loader = document.getElementById("page-loader");
+  if (loader) {
+    loader.style.opacity = "0";
+    setTimeout(() => {
+      loader.style.display = "none";
+    }, 300);
+  }
+});
+
+/* FALLBACK (AGAR load event fail ho) */
+setTimeout(() => {
+  const loader = document.getElementById("page-loader");
+  if (loader) loader.style.display = "none";
+}, 3000);
+
 
 
 
