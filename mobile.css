@@ -1,208 +1,168 @@
 /* ==================================================
-   MOBILE CSS – TATLA AGRO (FINAL)
-   Applies only below 768px
+   MOBILE CSS – HARD RESET (FINAL)
+   THIS WILL FORCE PERFECT MOBILE LAYOUT
 ================================================== */
 
-/* =========================
-   GLOBAL MOBILE FIX
-========================= */
-body {
-  overflow-x: hidden;
-}
+@media (max-width: 768px) {
 
-section {
-  padding-left: 16px;
-  padding-right: 16px;
-}
+  /* ===== GLOBAL RESET ===== */
+  * {
+    max-width: 100% !important;
+    box-sizing: border-box;
+  }
 
-/* =========================
-   HEADER – MOBILE (NO HAMBURGER)
-========================= */
+  body {
+    overflow-x: hidden !important;
+  }
 
-/* Hide hamburger icon */
-.menu-icon {
-  display: none !important;
-}
+  /* =========================
+     HEADER – SIMPLE & CLEAN
+  ========================= */
 
-/* Header layout */
-.header-inner {
-  flex-wrap: wrap;
-  gap: 10px;
-}
+  .main-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #0f3d1f;
+    z-index: 9999;
+  }
 
-/* Nav menu inline */
-.nav-menu {
-  position: static;
-  display: flex !important;
-  flex-direction: row;
-  gap: 14px;
-  background: transparent;
-  width: auto;
-}
+  .header-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 12px 10px;
+    gap: 8px;
+  }
 
-/* Nav links */
-.nav-menu a {
-  padding: 0;
-  font-size: 13px;
-  color: #ffffff;
-  border: none;
-  white-space: nowrap;
-}
+  /* LOGO */
+  .logo {
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 2px;
+  }
 
-/* =========================
-   HERO – MOBILE PERFECT FIX
-========================= */
+  /* REMOVE HAMBURGER */
+  .menu-icon {
+    display: none !important;
+  }
 
-/* Hero height = 60% screen */
-.hero-slider {
-  height: 60vh;
-  margin-top: 60px;
-  overflow: hidden;
-}
+  /* NAV LINKS DIRECT */
+  .nav-menu {
+    display: flex !important;
+    flex-direction: row;
+    gap: 14px;
+    position: static !important;
+    background: none !important;
+  }
 
-/* Slides */
-.slide {
-  background-size: contain;          /* full image visible */
-  background-repeat: no-repeat;
-  background-position: center 40%;   /* image balance */
-}
+  .nav-menu a {
+    font-size: 13px;
+    color: #ffffff;
+    text-decoration: none;
+    white-space: nowrap;
+  }
 
-/* Hero text container */
-.hero-text {
-  padding: 0 16px;
-  text-align: center;
-  justify-content: center;
-}
+  /* =========================
+     HERO – PERFECT MOBILE
+  ========================= */
 
-/* Heading */
-.hero-text h1 {
-  font-size: 23px;
-  line-height: 1.25;
-  font-weight: 700;
-  margin-bottom: 6px;
-}
+  .hero-slider {
+    margin-top: 96px;      /* header height fix */
+    height: 60vh;          /* 60% screen */
+    position: relative;
+    overflow: hidden;
+  }
 
-/* Subheading */
-.hero-text p {
-  font-size: 13px;
-  line-height: 1.45;
-  margin-bottom: 14px;
-  opacity: 0.95;
-}
+  .slide {
+    position: absolute;
+    inset: 0;
+    background-repeat: no-repeat;
+    background-size: contain;      /* FULL IMAGE */
+    background-position: center;   /* NO CUT */
+  }
 
-/* CTA button */
-.hero-text .btn {
-  padding: 12px 24px;
-  font-size: 14px;
-  border-radius: 28px;
-}
+  /* TEXT CENTER FIX */
+  .hero-text {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 14px;
+    text-align: center;
+  }
 
-/* Remove forced line breaks */
-.hero-text h1 br {
-  display: none;
-}
+  /* HEADING */
+  .hero-text h1 {
+    font-size: 22px;
+    line-height: 1.25;
+    margin-bottom: 6px;
+    font-weight: 700;
+  }
 
-/* =========================
-   ABOUT SECTION – MOBILE
-========================= */
+  /* SUBTEXT */
+  .hero-text p {
+    font-size: 13px;
+    line-height: 1.45;
+    margin-bottom: 14px;
+  }
 
-.about {
-  padding-top: 60px;
-}
+  /* BUTTON */
+  .hero-text .btn {
+    padding: 12px 22px;
+    font-size: 14px;
+    border-radius: 28px;
+  }
 
-.about-grid {
-  grid-template-columns: 1fr;
-  gap: 24px;
-}
+  /* =========================
+     SECTIONS – MOBILE
+  ========================= */
 
-.about-box {
-  padding: 24px;
-}
+  section {
+    padding: 60px 16px !important;
+  }
 
-/* =========================
-   SERVICES – MOBILE
-========================= */
+  /* ABOUT */
+  .about-grid {
+    grid-template-columns: 1fr !important;
+    gap: 20px;
+  }
 
-.services-grid {
-  grid-template-columns: 1fr;
-  gap: 22px;
-}
+  /* SERVICES */
+  .services-grid {
+    grid-template-columns: 1fr !important;
+    gap: 20px;
+  }
 
-/* =========================
-   PROJECTS / GALLERY – MOBILE
-========================= */
+  /* PROJECTS */
+  .projects-grid {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 12px;
+  }
 
-.projects-grid {
-  grid-template-columns: 1fr 1fr;
-  gap: 14px;
-}
+  /* =========================
+     CONTACT – FIXED
+  ========================= */
 
-.projects-grid img {
-  height: 160px;
-  object-fit: cover;
-  border-radius: 12px;
-}
+  .contact-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 24px;
+  }
 
-/* =========================
-   CONTACT – MOBILE FIX
-========================= */
+  .contact-info iframe {
+    height: 220px;
+    width: 100%;
+    border-radius: 14px;
+  }
 
-.contact-grid {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-}
+  .contact-form {
+    width: 100%;
+    padding: 22px;
+    border-radius: 18px;
+  }
 
-/* Contact info */
-.contact-info {
-  width: 100%;
-}
-
-/* Map */
-.contact-info iframe {
-  width: 100%;
-  height: 220px;
-  border-radius: 14px;
-  border: none;
-}
-
-/* Contact form */
-.contact-form {
-  width: 100%;
-  background: #ffffff;
-  padding: 22px;
-  border-radius: 18px;
-  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
-}
-
-/* Inputs */
-.contact-form input,
-.contact-form textarea {
-  width: 100%;
-  padding: 14px;
-  margin-bottom: 12px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  font-size: 14px;
-}
-
-/* Button */
-.contact-form button {
-  width: 100%;
-  padding: 14px;
-  background: linear-gradient(135deg, #25d366, #1ebc57);
-  border: none;
-  color: #fff;
-  font-size: 15px;
-  font-weight: 600;
-  border-radius: 8px;
-}
-
-/* =========================
-   FOOTER – MOBILE
-========================= */
-
-.site-footer {
-  text-align: center;
-  padding: 20px 16px;
 }
