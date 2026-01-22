@@ -1,412 +1,308 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TATLA AGRO | Professional Landscaping</title>
-    <meta name="description"
-        content="Tatla Agro Pvt. Ltd. – Professional landscaping, plantation, irrigation & AMC services.">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="mobile.css" media="only screen and (max-width: 768px)">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TATLA AGRO | Professional Landscaping</title>
+  <meta name="description" content="Tatla Agro Pvt. Ltd. – Professional landscaping & green infrastructure solutions.">
 
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="mobile.css" media="only screen and (max-width:768px)">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
 <body>
-    <div id="page-loader" data-loader>
+
+<!-- LOADER -->
+<div id="page-loader">
   <div class="loader-ring"></div>
   <p>Loading Green Excellence...</p>
 </div>
 
-    <div id="progress-bar"></div>
+<div id="progress-bar"></div>
 
+<!-- HEADER -->
+<header class="main-header">
+  <div class="header-inner">
+    <div class="logo">TATLA AGRO</div>
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
 
-    <!-- HEADER -->
-    <header class="main-header">
-        <div class="header-inner">
-            <div class="logo">TATLA AGRO</div>
+    <nav class="nav-menu" id="navMenu">
+      <a href="#home" onclick="closeMenu()">Home</a>
+      <a href="#about" onclick="closeMenu()">About</a>
+      <a href="#services" onclick="closeMenu()">Services</a>
+      <a href="#gallery" onclick="closeMenu()">Gallery</a>
+      <a href="#contact" onclick="closeMenu()">Contact</a>
+    </nav>
+  </div>
+</header>
 
-            <div class="menu-icon" onclick="toggleMenu()">☰</div>
+<!-- HERO -->
+<section class="hero-slider" id="home">
+  <div class="slide active" style="background-image:url('1.jpeg')"></div>
+  <div class="slide" style="background-image:url('2.jpeg')"></div>
+  <div class="slide" style="background-image:url('3.jpeg')"></div>
 
-            <nav class="nav-menu" id="navMenu">
-                <a href="#home" onclick="closeMenu()">Home</a>
-                <a href="#about" onclick="closeMenu()">About</a>
-                <a href="#services" onclick="closeMenu()">Services</a>
-                <a href="#gallery" onclick="closeMenu()">Gallery</a>
-                <a href="#contact" onclick="closeMenu()">Contact</a>
-            </nav>
-        </div>
-    </header>
+  <div class="hero-overlay"></div>
 
-    <!-- HERO -->
-    <section class="hero-slider parallax" id="home">
+  <div class="hero-text">
+    <h1>Building Sustainable Green Landscapes</h1>
+    <p>Professional Landscaping & Eco-Friendly Solutions</p>
+    <a href="#contact" class="btn">Get Consultation</a>
+  </div>
+</section>
+<!-- ================= ABOUT SECTION ================= -->
+<section class="about-section reveal" id="about">
+  <div class="about-box">
 
-        <div class="slide active" style="background-image:url('1.jpeg')"></div>
-        <div class="slide" style="background-image:url('2.jpeg')"></div>
-        <div class="slide" style="background-image:url('3.jpeg')"></div>
+    <h2>About Tatla Agro</h2>
+    <p class="subtitle">Professional Landscaping & Green Infrastructure Solutions</p>
 
-       <div class="hero-overlay"></div>
+    <p>
+      <strong>Tatla Agro Pvt. Ltd.</strong> is a professionally managed landscaping and
+      green infrastructure company focused on developing sustainable, high-quality
+      outdoor environments. We combine design, nature, and disciplined execution
+      to deliver long-term value-driven landscapes.
+    </p>
 
+    <p>
+      Our services include landscape development, plantation, irrigation systems,
+      lawn development, and Annual Maintenance Contracts (AMC). We work across
+      residential villas, farmhouses, townships, commercial campuses, and
+      institutional projects.
+    </p>
 
-        <div class="hero-text">
-            <h1 class="split-text">Building Sustainable Green Landscapes</h1>
-            <p>Professional Landscaping & Eco-Friendly Solutions</p>
-            <a href="#contact" class="btn magnetic">Get Consultation</a>
+    <p>
+      At Tatla Agro, landscapes are treated as long-term assets, not one-time
+      installations. Our professional planning, water-efficient systems, and
+      ongoing maintenance ensure every project improves in quality over time.
+    </p>
 
-        </div>
-    </section>
+    <div class="about-grid">
+      <div class="about-box">
+        <h3>Our Mission</h3>
+        <p>
+          To design, develop, and maintain sustainable green spaces that balance
+          aesthetics, functionality, and environmental responsibility.
+        </p>
+      </div>
 
-    <!-- ABOUT -->
-    <section class="about-section" id="about">
-        <div class="about-box sticky-section reveal">
-
-            <h2>About Tatla Agro</h2>
-            <p class="subtitle">Professional Landscaping & Green Infrastructure Solutions</p>
-
-            <p>
-                <strong>Tatla Agro Pvt. Ltd.</strong> is a professionally managed landscaping and green
-                infrastructure company focused on creating sustainable, high-quality outdoor environments.
-                We work at the intersection of nature, design, and disciplined execution to deliver landscapes
-                that generate long-term environmental, functional, and economic value.
-            </p>
-
-            <p>
-                Our expertise spans landscape development, plantation, irrigation systems, and annual
-                maintenance contracts (AMC) for villas, farmhouses, residential communities, townships,
-                and commercial developments. With a structured, system-driven approach and a
-                future-focused mindset, we create green assets that mature gracefully and perform reliably
-                over time.
-            </p>
-
-            <p>
-                At Tatla Agro, we believe that landscapes are not one-time installations but long-term
-                investments. Our emphasis on professional execution, water efficiency, and ongoing
-                maintenance ensures that every project continues to improve in quality, health, and visual
-                appeal year after year.
-            </p>
-
-            <div class="about-grid">
-                <div class="about-box">
-                    <h3>Our Mission</h3>
-                    <p>
-                        To design, develop, and maintain sustainable green spaces that balance aesthetics,
-                        functionality, and environmental responsibility through professional systems and
-                        long-term planning.
-                    </p>
-                </div>
-
-                <div class="about-box">
-                    <h3>Our Vision</h3>
-                    <p>
-                        To build a trusted and scalable landscaping brand recognized for quality, discipline,
-                        and sustainable growth across residential, commercial, and institutional projects.
-                    </p>
-                </div>
-            </div>
-
-            <h3 class="why-title">Why Tatla Agro</h3>
-            <ul class="why-list">
-                <li>Sustainability-first and water-efficient landscaping practices</li>
-                <li>System-driven execution with clear timelines and accountability</li>
-                <li>Strong focus on long-term maintenance through AMC services</li>
-                <li>End-to-end landscaping solutions from planning to maintenance</li>
-                <li>Proven capability across residential, commercial, and large-area projects</li>
-            </ul>
-        </div>
-    </section>
-
-    <section class="process reveal">
-        <h2>Our Working Process</h2>
-        <div class="process-grid">
-
-            <div class="process-step">
-                <span>01</span>
-                <h3>Site Study</h3>
-                <p>Detailed site inspection, soil analysis & requirement understanding.</p>
-            </div>
-
-            <div class="process-step">
-                <span>02</span>
-                <h3>Design & Planning</h3>
-                <p>Landscape layout, plantation planning & irrigation strategy.</p>
-            </div>
-
-            <div class="process-step">
-                <span>03</span>
-                <h3>Execution</h3>
-                <p>Professional on-site execution with quality control.</p>
-            </div>
-
-            <div class="process-step">
-                <span>04</span>
-                <h3>AMC & Maintenance</h3>
-                <p>Long-term maintenance to ensure landscape maturity.</p>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- SERVICES -->
-    <section class="services-section" id="services">
-        <div class="service-card reveal tilt">
-
-
-            <h2>Our Services</h2>
-            <p class="subtitle">
-                End-to-end landscaping and green infrastructure solutions
-            </p>
-
-            <div class="services-grid">
-
-                <div class="service-card">
-                    <img src="5.jpeg" alt="Landscape Development">
-                    <h3>Landscape Development</h3>
-                    <p>
-                        Complete landscape planning and execution including softscape,
-                        hardscape, lawns, pathways, and sustainable green spaces.
-                    </p>
-                </div>
-
-                <div class="service-card">
-                    <img src="6.jpeg" alt="Plantation and Lawn">
-                    <h3>Plantation & Lawn Development</h3>
-                    <p>
-                        Scientific plantation, turfing, soil preparation, and lawn
-                        development for healthy and uniform green cover.
-                    </p>
-                </div>
-
-                <div class="service-card">
-                    <img src="7.jpeg" alt="Irrigation System">
-                    <h3>Irrigation Systems</h3>
-                    <p>
-                        Efficient drip and sprinkler irrigation systems focused on
-                        water conservation and plant health.
-                    </p>
-                </div>
-
-                <div class="service-card">
-                    <img src="8.jpeg" alt="Maintenance Services">
-                    <h3>Annual Maintenance Contracts (AMC)</h3>
-                    <p>
-                        Structured maintenance programs including pruning, fertilization,
-                        irrigation management, and seasonal care.
-                    </p>
-                </div>
-
-                <div class="service-card">
-                    <img src="9.jpeg" alt="Commercial Landscaping">
-                    <h3>Commercial & Township Projects</h3>
-                    <p>
-                        Landscaping solutions for residential societies, townships,
-                        parks, commercial campuses, and institutions.
-                    </p>
-                </div>
-
-                <div class="service-card">
-                    <img src="10.jpeg" alt="Green Consulting">
-                    <h3>Green Infrastructure Consulting</h3>
-                    <p>
-                        Professional consulting for sustainable landscape planning,
-                        execution strategy, and long-term green asset management.
-                    </p>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-
-
-    <!-- GALLERY -->
-    <section class="gallery-section" id="gallery">
-        <div class="container">
-
-            <h2>Our Projects</h2>
-            <p class="subtitle">
-                A glimpse of our completed and ongoing landscaping projects
-            </p>
-
-            <div class="gallery-grid">
-
-                <div class="gallery-item" onclick="openLightbox('1.jpeg')">
-                    <img src="1.jpeg" class="float" alt="Landscape Project">
-                    <div class="gallery-overlay">View Project</div>
-                </div>
-
-                <div class="gallery-item" onclick="openLightbox('2.jpeg')">
-                    <img src="2.jpeg" class="float" alt="Landscape Project">
-                    <div class="gallery-overlay">View Project</div>
-                </div>
-
-                <div class="gallery-item" onclick="openLightbox('3.jpeg')">
-                    <img src="3.jpeg" class="float" alt="Landscape Project">
-                    <div class="gallery-overlay">View Project</div>
-                </div>
-
-                <div class="gallery-item" onclick="openLightbox('4.jpeg')">
-                    <img src="4.jpeg" class="float" alt="Landscape Project">
-                    <div class="gallery-overlay">View Project</div>
-                </div>
-
-                <div class="gallery-item" onclick="openLightbox('5.jpeg')">
-                    <img src="5.jpeg" class="float" alt="Landscape Project">
-                    <div class="gallery-overlay">View Project</div>
-                </div>
-
-                <div class="gallery-item" onclick="openLightbox('6.jpeg')">
-                    <img src="6.jpeg" class="float" alt="Landscape Project">
-                    <div class="gallery-overlay">View Project</div>
-                </div>
-                <div class="gallery-item" onclick="openLightbox('7.jpeg')">
-                    <img src="7.jpeg" class="float">
-                    <div class="gallery-overlay">Residential Landscape</div>
-                </div>
-
-                <div class="gallery-item" onclick="openLightbox('8.jpeg')">
-                    <img src="8.jpeg" class="float">
-                    <div class="gallery-overlay">Farmhouse Plantation</div>
-                </div>
-
-                <div class="gallery-item" onclick="openLightbox('9.jpeg')">
-                    <img src="9.jpeg" class="float">
-                    <div class="gallery-overlay">Commercial Green Space</div>
-                </div>
-
-                <div class="gallery-item" onclick="openLightbox('10.jpeg')">
-                    <img src="10.jpeg" class="float">
-                    <div class="gallery-overlay">Township Landscaping</div>
-                </div>
-
-                <div class="gallery-item" onclick="openLightbox('11.jpeg')">
-                    <img src="11.jpeg" class="float">
-                    <div class="gallery-overlay">Lawn Development</div>
-                </div>
-
-                <div class="gallery-item" onclick="openLightbox('12.jpeg')">
-                    <img src="12.jpeg" class="float">
-                    <div class="gallery-overlay">Irrigation Project</div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- LIGHTBOX -->
-    <div class="lightbox" id="lightbox" onclick="closeLightbox()">
-        <span class="close-btn">&times;</span>
-        <img id="lightbox-img">
+      <div class="about-box">
+        <h3>Our Vision</h3>
+        <p>
+          To build a trusted landscaping brand recognized for quality,
+          professionalism, and long-term sustainable growth.
+        </p>
+      </div>
     </div>
 
+    <h3 class="why-title">Why Choose Tatla Agro</h3>
+    <ul class="why-list">
+      <li>Sustainability-first landscaping approach</li>
+      <li>Professional execution with system-driven planning</li>
+      <li>Water-efficient irrigation solutions</li>
+      <li>Strong focus on long-term maintenance (AMC)</li>
+      <li>Experience in residential & commercial projects</li>
+    </ul>
 
+  </div>
+</section>
 
-    <!-- CONTACT -->
-    <section class="contact-pro" id="contact">
-        <div class="contact-container">
+<!-- ================= WORKING PROCESS ================= -->
+<section class="process reveal">
+  <h2>Our Working Process</h2>
+  <p class="subtitle">Structured execution for long-lasting green spaces</p>
 
-            <!-- LEFT : GET IN TOUCH -->
-            <div class="contact-left">
-                <h2>Get in Touch</h2>
-                <p>
-                    Let’s discuss how <strong>TATLA AGRO</strong> can help you create
-                    sustainable, high-quality green landscapes.
-                </p>
+  <div class="process-grid">
 
-                <div class="info-box">
-                    <span>📞</span>
-                    <div>
-                        <h4>Call / WhatsApp</h4>
-                        <p>+91 78788 00305</p>
-                    </div>
-                </div>
+    <div class="process-step">
+      <span>01</span>
+      <h3>Site Inspection</h3>
+      <p>Detailed site visit, soil testing, and requirement understanding.</p>
+    </div>
 
-                <div class="info-box">
-                    <span>📧</span>
-                    <div>
-                        <h4>Email</h4>
-                        <p>tatlaagro@gmail.com</p>
-                    </div>
-                </div>
+    <div class="process-step">
+      <span>02</span>
+      <h3>Design & Planning</h3>
+      <p>Landscape layout, plantation planning, and irrigation strategy.</p>
+    </div>
 
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5981.088349086191!2d75.70664838748525!3d26.954976869300257!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396c4cd67a8f093d%3A0x9d8cc6167a414811!2sXP34%2BFX5%2C%20Jethu%20Rd%2C%20Govindpura%2C%20Jaipur%2C%20Rajasthan%20302044!5e0!3m2!1sen!2sin!4v1768583496267!5m2!1sen!2sin"
+    <div class="process-step">
+      <span>03</span>
+      <h3>Execution</h3>
+      <p>Professional on-site execution with quality control.</p>
+    </div>
+
+    <div class="process-step">
+      <span>04</span>
+      <h3>Plantation & Installation</h3>
+      <p>Scientific plantation, turfing, and irrigation installation.</p>
+    </div>
+
+    <div class="process-step">
+      <span>05</span>
+      <h3>Monitoring</h3>
+      <p>Regular monitoring for plant health and growth.</p>
+    </div>
+
+    <div class="process-step">
+      <span>06</span>
+      <h3>AMC & Maintenance</h3>
+      <p>Long-term maintenance for mature and healthy landscapes.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ================= PROJECTS / GALLERY ================= -->
+<section class="gallery-section reveal" id="gallery">
+  <h2>Our Projects</h2>
+  <p class="subtitle">Completed & ongoing landscaping projects</p>
+
+  <div class="gallery-grid">
+
+    <!-- 15 IMAGES -->
+    <div class="gallery-item" onclick="openLightbox('1.jpeg')">
+      <img src="1.jpeg">
+      <div class="gallery-overlay">Project 1</div>
+    </div>
+
+    <div class="gallery-item" onclick="openLightbox('2.jpeg')">
+      <img src="2.jpeg">
+      <div class="gallery-overlay">Project 2</div>
+    </div>
+
+    <div class="gallery-item" onclick="openLightbox('3.jpeg')">
+      <img src="3.jpeg">
+      <div class="gallery-overlay">Project 3</div>
+    </div>
+
+    <div class="gallery-item" onclick="openLightbox('4.jpeg')">
+      <img src="4.jpeg">
+      <div class="gallery-overlay">Project 4</div>
+    </div>
+
+    <div class="gallery-item" onclick="openLightbox('5.jpeg')">
+      <img src="5.jpeg">
+      <div class="gallery-overlay">Project 5</div>
+    </div>
+
+    <div class="gallery-item" onclick="openLightbox('6.jpeg')">
+      <img src="6.jpeg">
+      <div class="gallery-overlay">Project 6</div>
+    </div>
+
+    <div class="gallery-item" onclick="openLightbox('7.jpeg')">
+      <img src="7.jpeg">
+      <div class="gallery-overlay">Project 7</div>
+    </div>
+
+    <div class="gallery-item" onclick="openLightbox('8.jpeg')">
+      <img src="8.jpeg">
+      <div class="gallery-overlay">Project 8</div>
+    </div>
+
+    <div class="gallery-item" onclick="openLightbox('9.jpeg')">
+      <img src="9.jpeg">
+      <div class="gallery-overlay">Project 9</div>
+    </div>
+
+    <div class="gallery-item" onclick="openLightbox('10.jpeg')">
+      <img src="10.jpeg">
+      <div class="gallery-overlay">Project 10</div>
+    </div>
+
+    <div class="gallery-item" onclick="openLightbox('11.jpeg')">
+      <img src="11.jpeg">
+      <div class="gallery-overlay">Project 11</div>
+    </div>
+
+    <div class="gallery-item" onclick="openLightbox('12.jpeg')">
+      <img src="12.jpeg">
+      <div class="gallery-overlay">Project 12</div>
+    </div>
+
+    <div class="gallery-item" onclick="openLightbox('13.jpeg')">
+      <img src="13.jpeg">
+      <div class="gallery-overlay">Project 13</div>
+    </div>
+
+    <div class="gallery-item" onclick="openLightbox('14.jpeg')">
+      <img src="14.jpeg">
+      <div class="gallery-overlay">Project 14</div>
+    </div>
+
+    <div class="gallery-item" onclick="openLightbox('15.jpeg')">
+      <img src="15.jpeg">
+      <div class="gallery-overlay">Project 15</div>
+    </div>
+
+  </div>
+</section>
+
+  <!-- CONTACT + FORM -->
+    <div class="footer-col">
+      <h4>Contact Us</h4>
+      <p>📞 +91 78788 00305</p>
+      <p>📧 tatlaagro@gmail.com</p>
+      <p>📍 Jaipur, Rajasthan</p>
+
+      <!-- FOOTER CONTACT FORM -->
+      <form class="footer-form" onsubmit="sendWhatsApp(); return false;">
+        <input type="text" id="name" placeholder="Your Name" required>
+        <input type="tel" id="mobile" placeholder="Mobile Number" required>
+        <textarea id="message" placeholder="Your Requirement"></textarea>
+        <button type="submit">Send on WhatsApp</button>
+      </form>
+    </div>
+
+  </div>
+
+  <!-- MAP -->
+  <div class="footer-map">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5981.088349086191!2d75.70664838748525!3d26.954976869300257!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396c4cd67a8f093d%3A0x9d8cc6167a414811!2sXP34%2BFX5%2C%20Jethu%20Rd%2C%20Govindpura%2C%20Jaipur%2C%20Rajasthan%20302044!5e0!3m2!1sen!2sin!4v1768583496267!5m2!1sen!2sin"
                     width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
+                    referrerpolicy="no-referrer-when-downgrade">
+</iframe>
+  </div>
+    <!-- ================= FOOTER ================= -->
+<footer class="site-footer">
+  <div class="footer-container">
 
-            <!-- RIGHT : CONTACT FORM -->
-            <div class="contact-right">
-                <h2>Contact Us</h2>
+    <!-- BRAND / ABOUT -->
+    <div class="footer-col">
+      <h3>TATLA AGRO</h3>
+      <p>
+        Professional landscaping & green infrastructure solutions focused on
+        sustainability, quality, and long-term value.
+      </p>
 
-                <form class="contact-form" onsubmit="sendWhatsApp(); return false;">
-                    <input type="text" id="name" placeholder="Your Name" required>
-                    <input type="tel" id="mobile" placeholder="Mobile Number" required>
-                    <textarea id="message" placeholder="Your Requirement"></textarea>
-                    <button type="submit">Send on WhatsApp</button>
-                </form>
-            </div>
+      <!-- SOCIAL ICONS -->
+      <div class="social-links">
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://wa.me/917878800305" aria-label="WhatsApp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </div>
+    </div>
+    <!-- QUICK LINKS -->
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#gallery">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
 
-        </div>
-    </section>
+  
 
-
-
-
-
-    <footer class="site-footer">
-        <div class="footer-container">
-
-            <!-- BRAND -->
-            <div class="footer-col">
-                <h3>TATLA AGRO</h3>
-
-
-                <p>
-                    Professional landscaping & green infrastructure solutions focused on
-                    sustainability, quality, and long-term value.
-                </p>
-                <div class="social-links">
-                    <a href="#" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="#" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="https://wa.me/917878800305" target="_blank" aria-label="WhatsApp"><i
-                            class="fab fa-whatsapp"></i></a>
-                </div>
-            </div>
-
-            <!-- QUICK LINKS -->
-            <div class="footer-col">
-                <h4>Quick Links</h4>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About </a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#Gallery">Gallery</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </div>
-
-            <!-- CONTACT INFO -->
-            <div class="footer-col">
-                <h4>Contact Info</h4>
-                <p>📞 +91 78788 00305</p>
-                <p>📧 tatlaagro@gmail.com</p>
-                <p>📍 Jaipur, Rajasthan</p>
-            </div>
-
-        </div>
-
-        <div class="footer-bottom">
-            © 2026 <strong>TATLA AGRO</strong>. All Rights Reserved.
-        </div>
-    </footer>
-
-
-    <script src="script.js"></script>
-</body>
-
-
-</html>
-
-
+  <div class="footer-bottom">
+    © 2026 <strong>TATLA AGRO</strong>. All Rights Reserved.
+  </div>
+</footer>
