@@ -1,182 +1,148 @@
-/* =================================================
-   MOBILE CSS – TATLA AGRO (FINAL & CLEAN)
-   Screen ≤ 768px
-================================================= */
-@media (max-width: 768px) {
+/* ==================================================
+   MOBILE CSS – TATLA AGRO (FINAL)
+   Applies only below 768px
+================================================== */
 
-  /* -------- BASE RESET -------- */
-  html, body {
-    overflow-x: hidden;
-    width: 100%;
-  }
-
-  img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-  }
-
-  /* -------- HEADER / NAV -------- */
-  .menu-icon {
-    display: block;
-  }
-
-  .header-inner {
-    padding: 14px 16px;
-  }
-
-  .nav-menu {
-    position: fixed;
-    top: 64px;
-    left: 0;
-    width: 100%;
-    background: #0f3d1f;
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    padding: 22px 0;
-    transform: translateY(-120%);
-    transition: 0.35s ease;
-    z-index: 999;
-  }
-
-  .nav-menu.active {
-    transform: translateY(0);
-  }
-
-  .nav-menu a {
-    margin: 0;
-    text-align: center;
-    font-size: 16px;
-  }
-
-  /* -------- HERO -------- */
-  .hero-slider {
-    height: 60vh;
-    padding-top: 64px;
-  }
-
-  .hero-text h1 {
-    font-size: 26px;
-    line-height: 1.3;
-  }
-
-  .hero-text p {
-    font-size: 14px;
-  }
-
-  .hero-text .btn {
-    padding: 12px 24px;
-    font-size: 14px;
-  }
-
-  /* -------- SECTIONS -------- */
-  section {
-    padding: 70px 16px;
-  }
-
-  h2 {
-    font-size: 28px;
-  }
-
-  .subtitle {
-    font-size: 14px;
-    margin-bottom: 30px;
-  }
-
-  /* -------- ABOUT -------- */
-  .about-box {
-    padding: 28px;
-  }
-
-  .about-grid {
-    grid-template-columns: 1fr;
-    gap: 26px;
-  }
-
-  .why-title {
-    font-size: 22px;
-  }
-
-  /* -------- PROCESS -------- */
-  .process-grid {
-    grid-template-columns: 1fr;
-    gap: 24px;
-  }
-
-  .process-step {
-    padding: 26px;
-  }
-
-  /* -------- PROJECTS / GALLERY -------- */
-  .gallery-grid {
-    grid-template-columns: 1fr 1fr;
-    gap: 14px;
-  }
-
-  .gallery-item img {
-    height: 170px;
-  }
-
-  .gallery-overlay {
-    font-size: 13px;
-    text-align: center;
-    padding: 0 6px;
-  }
-
-  /* -------- CONTACT SECTION -------- */
-  .contact-pro {
-    padding: 80px 16px;
-  }
-
-  .contact-container {
-    grid-template-columns: 1fr;
-    gap: 36px;
-  }
-
-  .contact-left,
-  .contact-right {
-    padding: 28px;
-  }
-
-  .contact-left h2,
-  .contact-right h2 {
-    font-size: 26px;
-  }
-
-  .info-box {
-    padding: 16px;
-  }
-
-  .contact-form textarea {
-    height: 110px;
-  }
-
-  /* -------- MAP -------- */
-  .contact-map iframe {
-    height: 260px;
-  }
-
-  /* -------- FOOTER -------- */
-  .footer-container {
-    grid-template-columns: 1fr;
-    text-align: center;
-    gap: 30px;
-  }
-
-  .footer-contact p {
-    text-align: center;
-  }
-
-  .social-links {
-    justify-content: center;
-  }
-
-  .footer-bottom {
-    font-size: 12.5px;
-  }
-
+/* =========================
+   GLOBAL MOBILE FIX
+========================= */
+body {
+  overflow-x: hidden;
 }
+
+section {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+/* =========================
+   HEADER – MOBILE (NO HAMBURGER)
+========================= */
+
+/* Hide hamburger icon */
+.menu-icon {
+  display: none !important;
+}
+
+/* Header layout */
+.header-inner {
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* Nav menu inline */
+.nav-menu {
+  position: static;
+  display: flex !important;
+  flex-direction: row;
+  gap: 14px;
+  background: transparent;
+  width: auto;
+}
+
+/* Nav links */
+.nav-menu a {
+  padding: 0;
+  font-size: 13px;
+  color: #ffffff;
+  border: none;
+  white-space: nowrap;
+}
+
+/* =========================
+   HERO – MOBILE PERFECT FIX
+========================= */
+
+/* Hero height = 60% screen */
+.hero-slider {
+  height: 60vh;
+  margin-top: 60px;
+  overflow: hidden;
+}
+
+/* Slides */
+.slide {
+  background-size: contain;          /* full image visible */
+  background-repeat: no-repeat;
+  background-position: center 40%;   /* image balance */
+}
+
+/* Hero text container */
+.hero-text {
+  padding: 0 16px;
+  text-align: center;
+  justify-content: center;
+}
+
+/* Heading */
+.hero-text h1 {
+  font-size: 23px;
+  line-height: 1.25;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+/* Subheading */
+.hero-text p {
+  font-size: 13px;
+  line-height: 1.45;
+  margin-bottom: 14px;
+  opacity: 0.95;
+}
+
+/* CTA button */
+.hero-text .btn {
+  padding: 12px 24px;
+  font-size: 14px;
+  border-radius: 28px;
+}
+
+/* Remove forced line breaks */
+.hero-text h1 br {
+  display: none;
+}
+
+/* =========================
+   ABOUT SECTION – MOBILE
+========================= */
+
+.about {
+  padding-top: 60px;
+}
+
+.about-grid {
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+.about-box {
+  padding: 24px;
+}
+
+/* =========================
+   SERVICES – MOBILE
+========================= */
+
+.services-grid {
+  grid-template-columns: 1fr;
+  gap: 22px;
+}
+
+/* =========================
+   PROJECTS / GALLERY – MOBILE
+========================= */
+
+.projects-grid {
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.projects-grid img {
+  height: 160px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
 /* =========================
    CONTACT – MOBILE FIX
 ========================= */
@@ -187,19 +153,20 @@
   gap: 24px;
 }
 
-/* CONTACT INFO BOX */
+/* Contact info */
 .contact-info {
   width: 100%;
 }
 
-/* MAP */
+/* Map */
 .contact-info iframe {
   width: 100%;
-  height: 220px;   /* 🔥 mobile safe height */
+  height: 220px;
   border-radius: 14px;
+  border: none;
 }
 
-/* CONTACT FORM */
+/* Contact form */
 .contact-form {
   width: 100%;
   background: #ffffff;
@@ -208,7 +175,7 @@
   box-shadow: 0 12px 30px rgba(0,0,0,0.08);
 }
 
-/* INPUTS */
+/* Inputs */
 .contact-form input,
 .contact-form textarea {
   width: 100%;
@@ -219,7 +186,7 @@
   font-size: 14px;
 }
 
-/* BUTTON */
+/* Button */
 .contact-form button {
   width: 100%;
   padding: 14px;
@@ -230,39 +197,12 @@
   font-weight: 600;
   border-radius: 8px;
 }
+
 /* =========================
-   HERO TEXT – MOBILE FIX
+   FOOTER – MOBILE
 ========================= */
 
-.hero-text {
-  padding: 0 14px;
+.site-footer {
   text-align: center;
-}
-
-/* MAIN HEADING */
-.hero-text h1 {
-  font-size: 24px;        /* 🔥 balanced size */
-  line-height: 1.25;
-  font-weight: 700;
-  margin-bottom: 8px;
-}
-
-/* SUB TEXT */
-.hero-text p {
-  font-size: 13.5px;
-  line-height: 1.5;
-  margin-bottom: 16px;
-  opacity: 0.95;
-}
-
-/* BUTTON */
-.hero-text .btn {
-  padding: 12px 26px;
-  font-size: 14px;
-  border-radius: 30px;
-}
-
-/* TEXT BREAK CONTROL */
-.hero-text h1 br {
-  display: none;   /* 🔥 extra line breaks remove */
+  padding: 20px 16px;
 }
