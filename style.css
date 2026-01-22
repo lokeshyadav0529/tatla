@@ -1246,6 +1246,45 @@ html {
   text-align: center;
   padding: 0 16px;
 }
+/* =========================
+   SAFE AUTO HIDE LOADER
+========================= */
+
+#page-loader {
+  position: fixed;
+  inset: 0;
+  background: #0f3d1f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 999999;
+  animation: loaderHide 0s linear 2.5s forwards;
+}
+
+/* AUTO REMOVE AFTER 2.5s */
+@keyframes loaderHide {
+  to {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+}
+
+/* RING */
+.loader-ring {
+  width: 56px;
+  height: 56px;
+  border: 6px solid rgba(255,255,255,0.2);
+  border-top: 6px solid #4caf50;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
 
 
 
