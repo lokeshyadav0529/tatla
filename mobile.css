@@ -230,3 +230,39 @@
   font-weight: 600;
   border-radius: 8px;
 }
+/* =========================
+   HERO TEXT – MOBILE FIX
+========================= */
+
+.hero-text {
+  padding: 0 14px;
+  text-align: center;
+}
+
+/* MAIN HEADING */
+.hero-text h1 {
+  font-size: 24px;        /* 🔥 balanced size */
+  line-height: 1.25;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+/* SUB TEXT */
+.hero-text p {
+  font-size: 13.5px;
+  line-height: 1.5;
+  margin-bottom: 16px;
+  opacity: 0.95;
+}
+
+/* BUTTON */
+.hero-text .btn {
+  padding: 12px 26px;
+  font-size: 14px;
+  border-radius: 30px;
+}
+
+/* TEXT BREAK CONTROL */
+.hero-text h1 br {
+  display: none;   /* 🔥 extra line breaks remove */
+}
