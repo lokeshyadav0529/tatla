@@ -553,4 +553,8 @@ h2{
 .contact {
   background: linear-gradient(180deg, #f4f8f4, #e8f5e9);
 }
+.contact-pro {
+  min-height: 100vh;
+}
+
 
