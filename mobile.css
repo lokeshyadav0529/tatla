@@ -199,3 +199,51 @@ img {
     max-width: 100%;
   }
 }
+/* =========================
+   MOBILE HERO IMAGE FIX
+========================= */
+
+/* HERO CONTAINER */
+.hero-slider {
+  position: relative;
+  height: calc(100vh - 64px); /* header safe */
+  padding-top: 64px;
+  overflow: hidden;
+}
+
+/* SLIDE IMAGE */
+.slide {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center center;
+  filter: none !important;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+/* ACTIVE IMAGE */
+.slide.active {
+  opacity: 1;
+}
+
+/* REMOVE GREEN / DARK TINT */
+.hero-overlay {
+  background: rgba(0, 0, 0, 0.15) !important; /* very light */
+}
+
+/* TEXT */
+.hero-text {
+  position: relative;
+  z-index: 2;
+  padding: 0 16px;
+  text-align: center;
+}
+
+/* IMAGE QUALITY FIX */
+@media (max-width: 768px) {
+  .slide {
+    background-size: 115%;   /* balanced zoom */
+    background-position: center top;
+  }
+}
