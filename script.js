@@ -1,3 +1,4 @@
+
 /* ================= LOADER ================= */
 window.addEventListener("load", () => {
   document.getElementById("page-loader").style.display = "none";
@@ -15,12 +16,19 @@ setInterval(() => {
 
 /* ================= MOBILE MENU ================= */
 function toggleMenu() {
-  document.getElementById("navMenu").classList.toggle("show");
+  const menu = document.getElementById("navMenu");
+  if (menu.style.display === "flex") {
+    menu.style.display = "none";
+  } else {
+    menu.style.display = "flex";
+  }
 }
 
 function closeMenu() {
-  document.getElementById("navMenu").classList.remove("show");
+  document.getElementById("navMenu").style.display = "none";
 }
+
+/* =====
 
 /* ================= SCROLL PROGRESS ================= */
 window.addEventListener("scroll", () => {
@@ -71,3 +79,4 @@ Message: ${msg}`;
 
   window.open(url, "_blank");
 }
+
