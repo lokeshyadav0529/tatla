@@ -316,3 +316,8 @@ img {
   font-size: 14px;
   border-radius: 26px;
 }
+/* ALLOW LOADER ANIMATION ON MOBILE */
+#page-loader,
+#page-loader * {
+  animation: initial !important;
+}
