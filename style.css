@@ -576,6 +576,29 @@ h2{
   font-weight: 700;
   letter-spacing: 1px;
 }
+/* =========================
+   FOOTER LOGO
+========================= */
+.footer-brand {
+  text-align: center;
+}
+
+.footer-brand img {
+  height: 55px;
+  margin-bottom: 10px;
+}
+
+.footer-brand h3 {
+  color: #fff;
+  margin-bottom: 8px;
+}
+
+.footer-brand p {
+  font-size: 13px;
+  color: #ccc;
+  line-height: 1.5;
+}
+
 
 
 
