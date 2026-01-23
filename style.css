@@ -556,5 +556,26 @@ h2{
 .contact-pro {
   min-height: 100vh;
 }
+/* =========================
+   LOGO – HEADER
+========================= */
+.logo-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-box img {
+  height: 42px;
+  width: auto;
+}
+
+.logo-box span {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
 
 
