@@ -324,3 +324,16 @@ header{
     flex-wrap:wrap;
     justify-content:center;
 }
+@media(max-width:768px){
+
+    .dots{
+        right:auto;
+        left:50%;
+        bottom:25px;
+        top:auto;
+        transform:translateX(-50%);
+        flex-direction:row;   /* vertical se horizontal */
+        gap:10px;
+    }
+
+}
