@@ -255,4 +255,7 @@ header{
     width:100%;
     z-index:10;
 }
-
+.hero-slider{
+    min-height:100vh;
+    height:100dvh;  /* Latest dynamic viewport */
+}
