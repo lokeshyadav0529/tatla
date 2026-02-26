@@ -324,16 +324,20 @@ header{
     flex-wrap:wrap;
     justify-content:center;
 }
-@media(max-width:768px){
+/* ===== MOBILE DOT FIX FINAL ===== */
+@media (max-width:768px){
 
     .dots{
-        right:auto;
-        left:50%;
-        bottom:25px;
-        top:auto;
-        transform:translateX(-50%);
-        flex-direction:row;   /* vertical se horizontal */
-        gap:10px;
+        position: absolute !important;
+        top: auto !important;
+        right: auto !important;
+        left: 50% !important;
+        bottom: 20px !important;
+        transform: translateX(-50%) !important;
+
+        display: flex !important;
+        flex-direction: row !important;
+        gap: 8px;
     }
 
 }
