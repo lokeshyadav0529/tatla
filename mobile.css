@@ -1,354 +1,258 @@
-/* ================= GLOBAL FIX ================= */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
+/* =================================================
+   MOBILE CSS – TATLA AGRO (FINAL & CLEAN)
+   Screen ≤ 768px
+================================================= */
+@media (max-width: 768px) {
+
+  /* -------- BASE RESET -------- */
+  html, body {
+    overflow-x: hidden;
+    width: 100%;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  /* -------- HEADER / NAV -------- */
+  .menu-icon {
+    display: block;
+  }
+
+  .header-inner {
+    padding: 14px 16px;
+  }
+
+  .nav-menu {
+    position: fixed;
+    top: 64px;
+    left: 0;
+    width: 100%;
+    background: #0f3d1f;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 22px 0;
+    transform: translateY(-120%);
+    transition: 0.35s ease;
+    z-index: 999;
+  }
+
+  .nav-menu.active {
+    transform: translateY(0);
+  }
+
+  .nav-menu a {
+    margin: 0;
+    text-align: center;
+    font-size: 16px;
+  }
+
+  /* -------- HERO -------- */
+  .hero-slider {
+    height: 60vh;
+    padding-top: 64px;
+  }
+
+  .hero-text h1 {
+    font-size: 26px;
+    line-height: 1.3;
+  }
+
+  .hero-text p {
+    font-size: 14px;
+  }
+
+  .hero-text .btn {
+    padding: 12px 24px;
+    font-size: 14px;
+  }
+
+  /* -------- SECTIONS -------- */
+  section {
+    padding: 70px 16px;
+  }
+
+  h2 {
+    font-size: 28px;
+  }
+
+  .subtitle {
+    font-size: 14px;
+    margin-bottom: 30px;
+  }
+
+  /* -------- ABOUT -------- */
+  .about-box {
+    padding: 28px;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 26px;
+  }
+
+  .why-title {
+    font-size: 22px;
+  }
+
+  /* -------- PROCESS -------- */
+  .process-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .process-step {
+    padding: 26px;
+  }
+
+  /* -------- PROJECTS / GALLERY -------- */
+  .gallery-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+  }
+
+  .gallery-item img {
+    height: 170px;
+  }
+
+  .gallery-overlay {
+    font-size: 13px;
+    text-align: center;
+    padding: 0 6px;
+  }
+
+  /* -------- CONTACT SECTION -------- */
+  .contact-pro {
+    padding: 80px 16px;
+  }
+
+  .contact-container {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .contact-left,
+  .contact-right {
+    padding: 28px;
+  }
+
+  .contact-left h2,
+  .contact-right h2 {
+    font-size: 26px;
+  }
+
+  .info-box {
+    padding: 16px;
+  }
+
+  .contact-form textarea {
+    height: 110px;
+  }
+
+  /* -------- MAP -------- */
+  .contact-map iframe {
+    height: 260px;
+  }
+
+  /* -------- FOOTER -------- */
+  .footer-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .footer-contact p {
+    text-align: center;
+  }
+
+  .social-links {
+    justify-content: center;
+  }
+
+  .footer-bottom {
+    font-size: 12.5px;
+  }
+
+}
+.premium-service-grid{
+  grid-template-columns:1fr;
+  gap:25px;
 }
 
-html, body {
-  width: 100%;
-  max-width: 100%;
-  overflow-x: hidden;
-  margin: 0;
-  padding: 0;
+.premium-card{
+  height:320px;
+}
+/* Text animation smooth */
+.content span,
+.content h1,
+.content p{
+    opacity:0;
+    transform:translateY(25px);
+    transition:all 0.6s ease;
 }
 
-/* ================= HEADER ================= */
-.main-header {
-  width: 100%;
-  padding: 12px 16px;
+.slide.active .content span{
+    opacity:1;
+    transform:translateY(0);
+    transition-delay:0.3s;
 }
 
-.header-inner {
-  width: 100%;
-  max-width: 100%;
+.slide.active .content h1{
+    opacity:1;
+    transform:translateY(0);
+    transition-delay:0.5s;
 }
 
-.logo {
-  font-size: 20px;
-  letter-spacing: 1px;
+.slide.active .content p{
+    opacity:1;
+    transform:translateY(0);
+    transition-delay:0.7s;
+}
+/* Smooth cinematic zoom */
+.slide img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transform:scale(1.08);
+    transition:transform 4s ease-out;
+    will-change:transform;
 }
 
-.menu-icon {
-  display: block;
-  font-size: 26px;
+.slide.active img{
+    transform:scale(1);
+}
+@media(max-width:768px){
+
+    .slide img{
+        transform:scale(1.03);  /* zoom kam */
+        transition:transform 3s ease-out;
+    }
+
+}
+.hero-slider,
+.slide{
+    height:100svh;   /* Mobile real full height */
+    width:100%;
+}
+.slide img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    object-position:center;
+    display:block;
+}
+html,body{
+    margin:0;
+    padding:0;
+    overflow-x:hidden;
+}
+header{
+    position:absolute;
+    top:0;
+    width:100%;
+    z-index:10;
 }
 
-/* MOBILE NAV */
-.nav-menu {
-  position: fixed;
-  top: 64px;
-  left: 0;
-  width: 100vw;
-  height: auto;
-  background: #0c3b2e;
-  flex-direction: column;
-  display: none;
-}
-
-.nav-menu a {
-  width: 100%;
-  padding: 14px;
-  text-align: center;
-  font-size: 16px;
-  border-bottom: 1px solid rgba(255,255,255,0.15);
-}
-
-/* ================= HERO ================= */
-.hero-slider {
-  width: 100%;
-  height: 92vh;
-}
-
-.slide {
-  background-position: center;
-  background-size: cover;
-}
-
-.hero-overlay {
-  background: rgba(0,0,0,0.55);
-}
-
-.hero-text {
-  width: 100%;
-  padding: 0 18px;
-  text-align: center;
-}
-
-.hero-text h1 {
-  font-size: 26px;
-  line-height: 1.25;
-}
-
-.hero-text p {
-  font-size: 14px;
-  margin: 12px 0 20px;
-}
-
-.hero-text .btn {
-  padding: 12px 28px;
-  font-size: 14px;
-}
-
-/* ================= ABOUT ================= */
-.about-section {
-  width: 100%;
-  padding: 50px 16px;
-}
-
-.about-box {
-  width: 100%;
-  padding: 0;
-}
-
-.about-box h2 {
-  font-size: 25px;
-  text-align: center;
-}
-
-.subtitle {
-  font-size: 14px;
-  margin-bottom: 20px;
-}
-
-.about-box p {
-  font-size: 14px;
-  line-height: 1.65;
-}
-
-/* ABOUT GRID */
-.about-grid {
-  grid-template-columns: 1fr;
-  gap: 22px;
-}
-
-.about-grid .about-box {
-  padding: 22px;
-  border-radius: 10px;
-}
-
-.about-box h3 {
-  font-size: 18px;
-}
-
-.why-title {
-  text-align: center;
-  font-size: 20px;
-  margin-top: 35px;
-}
-
-.why-list {
-  padding-left: 18px;
-}
-
-.why-list li {
-  font-size: 14px;
-  margin-bottom: 8px;
-}
-
-/* ================= PROCESS ================= */
-.process {
-  width: 100%;
-  padding: 50px 16px;
-}
-
-.process h2 {
-  font-size: 25px;
-}
-
-.process-grid {
-  grid-template-columns: 1fr;
-  gap: 18px;
-}
-
-.process-step {
-  padding: 24px;
-  border-radius: 12px;
-}
-
-.process-step span {
-  font-size: 26px;
-}
-
-/* ================= GALLERY ================= */
-.gallery-section {
-  width: 100%;
-  padding: 50px 14px;
-}
-
-.gallery-section h2 {
-  font-size: 25px;
-}
-
-.gallery-grid {
-  grid-template-columns: 1fr;
-  gap: 14px;
-}
-
-.gallery-item {
-  width: 100%;
-  border-radius: 12px;
-  overflow: hidden;
-}
-
-.gallery-item img {
-  width: 100%;
-  height: 220px;
-  object-fit: cover;
-}
-
-/* ================= CONTACT ================= */
-.contact-pro {
-  width: 100%;
-  padding: 50px 16px;
-}
-
-.contact-container {
-  width: 100%;
-  flex-direction: column;
-  gap: 36px;
-}
-
-.contact-left,
-.contact-right {
-  width: 100%;
-}
-
-.contact-left h2,
-.contact-right h2 {
-  font-size: 24px;
-  text-align: center;
-}
-
-.contact-left p {
-  font-size: 14px;
-  text-align: center;
-}
-
-.info-box {
-  justify-content: center;
-  margin-bottom: 16px;
-}
-
-.info-box h4 {
-  font-size: 15px;
-}
-
-.info-box p {
-  font-size: 14px;
-}
-
-/* FORM */
-.contact-form {
-  width: 100%;
-}
-
-.contact-form input,
-.contact-form textarea {
-  width: 100%;
-  font-size: 14px;
-  padding: 12px;
-}
-
-.contact-form button {
-  width: 100%;
-  padding: 14px;
-  font-size: 15px;
-}
-
-/* MAP */
-.contact-map iframe {
-  width: 100vw;
-  height: 280px;
-  border: none;
-}
-
-/* ================= FOOTER ================= */
-.site-footer {
-  width: 100%;
-  padding: 45px 16px 18px;
-}
-
-.footer-container {
-  grid-template-columns: 1fr;
-  gap: 30px;
-  text-align: center;
-}
-
-.footer-col h3,
-.footer-col h4 {
-  font-size: 19px;
-}
-
-.footer-col p,
-.footer-col li a {
-  font-size: 14px;
-}
-
-.social-links {
-  justify-content: center;
-}
-
-.footer-bottom {
-  font-size: 13px;
-}
-/* ================= CONTACT FIX ================= */
-
-/* Allow full height */
-.contact-pro,
-.contact-container,
-.contact-right {
-  height: auto !important;
-  overflow: visible !important;
-}
-
-/* Stack properly */
-.contact-container {
-  display: flex !important;
-  flex-direction: column !important;
-  align-items: stretch;
-}
-
-/* Force form visibility */
-.contact-right {
-  width: 100%;
-  display: block;
-}
-
-/* Form proper spacing */
-.contact-form {
-  margin-top: 20px;
-}
-
-/* Inputs never hidden */
-.contact-form input,
-.contact-form textarea,
-.contact-form button {
-  display: block;
-  width: 100%;
-}
-
-/* Fix map pushing form */
-.contact-map {
-  margin-top: 40px;
-  width: 100%;
-}
-
-.contact-map iframe {
-  display: block;
-  width: 100%;
-  max-width: 100%;
-}
-/* =========================
-   MOBILE LOGO FIX
-========================= */
-.logo-box img {
-  height: 34px;
-}
-
-.logo-box span {
-  font-size: 16px;
-}
-.footer-brand img {
-  height: 45px;
-}
