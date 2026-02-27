@@ -1363,3 +1363,6 @@ h2{
     background: #ff4f81;
     opacity: 1;
 }
+.buttons{
+    margin-top:25px;   /* Pehle agar 10–15px tha to badha do */
+}
