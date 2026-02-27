@@ -341,3 +341,9 @@ header{
     }
 
 }
+@media (max-width:768px){
+    .hero-slider,
+    .slide{
+        height:75vh;
+    }
+}
