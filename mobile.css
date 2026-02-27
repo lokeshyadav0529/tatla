@@ -471,3 +471,10 @@ header{
     }
 
 }
+@media(max-width:768px){
+
+    .buttons{
+        margin-top:30px;
+    }
+
+}
