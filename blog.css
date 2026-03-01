@@ -743,3 +743,398 @@ img{
     max-width:100%;
     height:auto;
 }
+/* ================= HEADER PREMIUM ================= */
+
+.header-premium{
+  position:sticky;
+  top:0;
+  width:100%;
+  background:#ffffff;
+  border-bottom:1px solid #eee;
+  z-index:999;
+}
+
+.header-flex{
+  max-width:1200px;
+  margin:auto;
+  padding:15px 20px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+/* Logo */
+.brand{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+.brand img{
+  width:36px;
+}
+
+.company-name{
+  font-weight:700;
+  font-size:16px;
+  letter-spacing:1px;
+}
+
+/* Desktop Nav */
+.desktop-nav{
+  display:flex;
+  gap:30px;
+}
+
+.desktop-nav a{
+  text-decoration:none;
+  color:#333;
+  font-weight:500;
+  font-size:15px;
+}
+
+.desktop-nav a.active{
+  color:#4CAF50;
+}
+
+/* Mobile Toggle */
+.menu-toggle{
+  display:none;
+  font-size:26px;
+  cursor:pointer;
+}
+
+/* Mobile Menu */
+.mobile-menu{
+  display:none;
+  flex-direction:column;
+  padding:20px;
+  border-top:1px solid #eee;
+  background:#fff;
+}
+
+.mobile-menu a{
+  padding:12px 0;
+  text-decoration:none;
+  color:#333;
+  font-size:16px;
+  border-bottom:1px solid #f2f2f2;
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:768px){
+
+  .desktop-nav{
+    display:none;
+  }
+
+  .menu-toggle{
+    display:block;
+  }
+
+  .company-name{
+    font-size:15px;
+  }
+
+  .brand img{
+    width:32px;
+  }
+
+  .mobile-menu.active{
+    display:flex;
+  }
+
+}
+/* ==========================
+   MOBILE LUXURY DRAWER
+========================== */
+
+.menu-toggle{
+  font-size:28px;
+  cursor:pointer;
+}
+
+/* Overlay */
+.menu-overlay{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,0.5);
+  backdrop-filter:blur(6px);
+  opacity:0;
+  visibility:hidden;
+  transition:.3s ease;
+  z-index:998;
+}
+
+/* Drawer */
+.mobile-drawer{
+  position:fixed;
+  top:0;
+  left:-100%;
+  width:80%;
+  max-width:320px;
+  height:100%;
+  background:#0c0c0c;
+  color:#fff;
+  padding:25px;
+  transition:.4s cubic-bezier(.77,0,.18,1);
+  z-index:999;
+  display:flex;
+  flex-direction:column;
+}
+
+/* Active */
+.mobile-drawer.active{
+  left:0;
+}
+
+.menu-overlay.active{
+  opacity:1;
+  visibility:visible;
+}
+
+/* Close button */
+.drawer-header{
+  display:flex;
+  justify-content:flex-end;
+}
+
+.close-btn{
+  font-size:24px;
+  cursor:pointer;
+}
+
+/* Brand */
+.drawer-brand{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  margin:30px 0 40px;
+}
+
+.drawer-brand img{
+  width:40px;
+}
+
+.drawer-brand span{
+  font-size:18px;
+  font-weight:600;
+  letter-spacing:2px;
+}
+
+/* Navigation */
+.drawer-nav{
+  display:flex;
+  flex-direction:column;
+  gap:25px;
+}
+
+.drawer-nav a{
+  color:#fff;
+  font-size:18px;
+  text-decoration:none;
+  display:flex;
+  align-items:center;
+  gap:10px;
+  transition:.3s;
+}
+
+.drawer-nav a:hover{
+  color:#4CAF50;
+  transform:translateX(5px);
+}
+
+/* Hide desktop nav on mobile */
+@media(min-width:769px){
+  .menu-toggle,
+  .mobile-drawer,
+  .menu-overlay{
+    display:none;
+  }
+}
+/* ================= HEADER ================= */
+
+.header-premium{
+  position:sticky;
+  top:0;
+  background:#fff;
+  border-bottom:1px solid #eee;
+  z-index:999;
+}
+
+.header-flex{
+  max-width:1200px;
+  margin:auto;
+  padding:18px 40px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+/* Logo */
+.brand{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+
+.brand img{
+  width:45px;
+}
+
+.company-name{
+  font-weight:700;
+  letter-spacing:2px;
+  font-size:18px;
+}
+
+/* Desktop Nav */
+.desktop-nav{
+  display:flex;
+  gap:40px;
+}
+
+.desktop-nav a{
+  text-decoration:none;
+  color:#333;
+  font-weight:500;
+  position:relative;
+}
+
+.desktop-nav a.active{
+  color:#4CAF50;
+}
+
+.desktop-nav a::after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:-6px;
+  width:0%;
+  height:2px;
+  background:#4CAF50;
+  transition:.3s;
+}
+
+.desktop-nav a:hover::after{
+  width:100%;
+}
+
+/* ================= MOBILE DRAWER ================= */
+
+.menu-toggle{
+  display:none;
+  font-size:26px;
+  cursor:pointer;
+}
+
+/* Overlay */
+.menu-overlay{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,0.5);
+  backdrop-filter:blur(6px);
+  opacity:0;
+  visibility:hidden;
+  transition:.3s;
+  z-index:998;
+}
+
+/* Drawer */
+.mobile-drawer{
+  position:fixed;
+  top:0;
+  left:-100%;
+  width:80%;
+  max-width:320px;
+  height:100%;
+  background:#0c0c0c;
+  color:#fff;
+  padding:25px;
+  transition:.4s cubic-bezier(.77,0,.18,1);
+  z-index:999;
+  display:flex;
+  flex-direction:column;
+}
+
+.mobile-drawer.active{
+  left:0;
+}
+
+.menu-overlay.active{
+  opacity:1;
+  visibility:visible;
+}
+
+/* Drawer Content */
+.drawer-header{
+  display:flex;
+  justify-content:flex-end;
+}
+
+.close-btn{
+  font-size:24px;
+  cursor:pointer;
+}
+
+.drawer-brand{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  margin:30px 0 40px;
+}
+
+.drawer-brand img{
+  width:40px;
+}
+
+.drawer-brand span{
+  font-size:18px;
+  font-weight:600;
+  letter-spacing:2px;
+}
+
+.drawer-nav{
+  display:flex;
+  flex-direction:column;
+  gap:25px;
+}
+
+.drawer-nav a{
+  color:#fff;
+  font-size:18px;
+  text-decoration:none;
+  transition:.3s;
+}
+
+.drawer-nav a:hover{
+  color:#4CAF50;
+  transform:translateX(5px);
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:768px){
+
+  .desktop-nav{
+    display:none;  /* Hide desktop nav only on mobile */
+  }
+
+  .menu-toggle{
+    display:block; /* Show hamburger only on mobile */
+  }
+
+  .header-flex{
+    padding:15px 20px;
+  }
+
+  .company-name{
+    font-size:15px;
+  }
+
+  .brand img{
+    width:35px;
+  }
+
+}
