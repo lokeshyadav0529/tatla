@@ -309,4 +309,119 @@ blockquote{
     padding:60px 20px;
   }
 
+
+}
+/* =================================
+   MOBILE LUXURY OPTIMIZATION
+================================= */
+
+@media (max-width: 992px){
+
+  /* HERO */
+  .blog-details-hero{
+    padding:90px 20px 50px;
+  }
+
+  .blog-details-hero h1{
+    font-size:30px;
+    line-height:1.4;
+  }
+
+  .meta{
+    font-size:13px;
+  }
+
+  /* CONTENT */
+  .blog-details-container{
+    margin:60px auto;
+  }
+
+  .featured-image{
+    border-radius:15px;
+    margin-bottom:30px;
+  }
+
+  .blog-content-full h2{
+    font-size:22px;
+    margin-top:25px;
+  }
+
+  .blog-content-full p{
+    font-size:15px;
+    line-height:1.7;
+  }
+
+  blockquote{
+    font-size:16px;
+    padding:20px;
+  }
+
+  /* RELATED POSTS */
+  .related-grid{
+    grid-template-columns:1fr;
+    gap:25px;
+    padding:0 20px;
+  }
+
+  .related-card img{
+    height:200px;
+  }
+
+}
+
+/* =================================
+   SMALL MOBILE (iPhone size)
+================================= */
+
+@media (max-width: 576px){
+
+  .header-flex{
+    padding:12px 15px;
+  }
+
+  .brand img{
+    width:35px;
+  }
+
+  .company-name{
+    font-size:15px;
+    letter-spacing:1px;
+  }
+
+  .desktop-nav{
+    display:none; /* Mobile pe hamburger use karo */
+  }
+
+  .blog-details-hero h1{
+    font-size:24px;
+  }
+
+  .lux-category{
+    font-size:11px;
+  }
+
+  .blog-content-full p{
+    font-size:14px;
+  }
+
+  .footer-container{
+    padding:50px 20px;
+  }
+
+}
+.blog-details-container,
+.related-posts{
+  animation:fadeUp 0.8s ease forwards;
+  opacity:0;
+}
+
+@keyframes fadeUp{
+  from{
+    opacity:0;
+    transform:translateY(20px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
 }
