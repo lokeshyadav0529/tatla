@@ -11,12 +11,16 @@
 <!-- ================= HEADER ================= -->
 
 <header class="header-premium">
-  <div class="container header-flex">
+
+  <div class="header-flex">
+
+    <!-- Logo -->
     <div class="brand">
       <img src="logo.png" alt="">
       <span class="company-name">TATLA AGRO</span>
     </div>
 
+    <!-- Desktop Navigation -->
     <nav class="desktop-nav">
       <a href="index.html">Home</a>
       <a href="#">About</a>
@@ -24,9 +28,39 @@
       <a href="blog.html" class="active">Blog</a>
       <a href="#">Contact</a>
     </nav>
+
+    <!-- Mobile Toggle -->
+    <div class="menu-toggle" onclick="openMenu()">
+      ☰
+    </div>
+
   </div>
 </header>
 
+<!-- Overlay -->
+<div class="menu-overlay" id="menuOverlay" onclick="closeMenu()"></div>
+
+<!-- Mobile Drawer -->
+<div class="mobile-drawer" id="mobileDrawer">
+
+  <div class="drawer-header">
+    <span class="close-btn" onclick="closeMenu()">✕</span>
+  </div>
+
+  <div class="drawer-brand">
+    <img src="logo.png">
+    <span>TATLA AGRO</span>
+  </div>
+
+  <nav class="drawer-nav">
+    <a href="index.html">🏠 Home</a>
+    <a href="about.html">ℹ️ About</a>
+    <a href="projects.html">🌿 Projects</a>
+    <a href="blog.html">📝 Blog</a>
+    <a href="contact.html">📞 Contact</a>
+  </nav>
+
+</div>
 
 <!-- ================= HERO SECTION ================= -->
 
@@ -188,6 +222,16 @@
   </div>
 
 </footer>
+<script>
+function openMenu(){
+  document.getElementById("mobileDrawer").classList.add("active");
+  document.getElementById("menuOverlay").classList.add("active");
+}
 
+function closeMenu(){
+  document.getElementById("mobileDrawer").classList.remove("active");
+  document.getElementById("menuOverlay").classList.remove("active");
+}
+</script>
 </body>
 </html>
