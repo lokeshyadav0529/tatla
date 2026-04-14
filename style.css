@@ -1527,8 +1527,9 @@ h2{
 #scrollTopBtn {
   position: fixed;
   bottom: 90px;
-  right: 35px;
-  width: 60px;
+  right: 20px;
+  width: 74px;
+    height: 65px;
   height: 60px;
   border-radius: 50%;
   border: none;
