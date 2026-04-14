@@ -157,3 +157,24 @@ function sendWhatsApp() {
   const url = `https://wa.me/917878800305?text=${text}`;
   window.open(url, "_blank");
 }
+const scrollBtn = document.getElementById("scrollTopBtn");
+const mapSection = document.querySelector(".contact-map");
+
+window.addEventListener("scroll", () => {
+  const mapTop = mapSection.offsetTop;
+  const scrollY = window.scrollY;
+
+  if (scrollY >= mapTop - 200) {
+    scrollBtn.style.display = "block";
+  } else {
+    scrollBtn.style.display = "none";
+  }
+});
+
+// Smooth scroll
+function scrollToTop() {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+}
