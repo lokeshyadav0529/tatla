@@ -324,5 +324,45 @@ function sendWhatsApp() {
   const url = `https://wa.me/917878800305?text=${text}`;
   window.open(url, "_blank");
 }
+document.addEventListener("DOMContentLoaded", function () {
 
+  const scrollBtn = document.getElementById("scrollTopBtn");
+  const progress = document.querySelector(".progress-bar");
+  const mapSection = document.querySelector(".contact-map");
+
+  if (!scrollBtn || !progress || !mapSection) return;
+
+  const totalLength = 163;
+
+  window.addEventListener("scroll", () => {
+
+    const scrollTop = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+
+    // progress calculate
+    const scrollPercent = scrollTop / docHeight;
+    const offset = totalLength - (scrollPercent * totalLength);
+    progress.style.strokeDashoffset = offset;
+
+    // show only near map
+    const mapTop = mapSection.getBoundingClientRect().top;
+    const windowHeight = window.innerHeight;
+
+    if (mapTop < windowHeight - 100) {
+      scrollBtn.classList.add("show");
+    } else {
+      scrollBtn.classList.remove("show");
+    }
+
+  });
+
+  // click scroll
+  scrollBtn.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  });
+
+});
 
