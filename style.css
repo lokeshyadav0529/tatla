@@ -1524,3 +1524,56 @@ h2{
 .brand{
     gap:14px;
 }
+#scrollTopBtn {
+  position: fixed;
+  bottom: 90px;
+  right: 35px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  display: none;
+  z-index: 999;
+
+  /* Glass effect */
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+
+  transform: scale(0.8);
+  opacity: 0;
+  transition: all 0.4s ease;
+}
+
+#scrollTopBtn.show {
+  display: block;
+  transform: scale(1);
+  opacity: 1;
+}
+
+/* Arrow */
+#scrollTopBtn .arrow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 20px;
+  color: white;
+}
+
+/* SVG Circle */
+.progress-bg {
+  fill: none;
+  stroke: rgba(255,255,255,0.2);
+  stroke-width: 4;
+}
+
+.progress-bar {
+  fill: none;
+  stroke: #00ff9d;
+  stroke-width: 4;
+  stroke-dasharray: 163;
+  stroke-dashoffset: 163;
+  transition: stroke-dashoffset 0.2s linear;
+}
