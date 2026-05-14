@@ -1,0 +1,775 @@
+# `terrace-garden.html`
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Terrace Garden | Tatla Agro</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
+
+:root{
+--primary:#2e7d32;
+--secondary:#66bb6a;
+--dark:#111827;
+--light:#f7faf7;
+--text:#4b5563;
+--white:#ffffff;
+--shadow:0 15px 40px rgba(0,0,0,0.08);
+}
+
+body{
+background:var(--light);
+color:#222;
+overflow-x:hidden;
+}
+
+.topbar{
+background:#0f172a;
+color:#fff;
+padding:10px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+font-size:14px;
+position:relative;
+z-index:1001;
+}
+
+.topbar-left{
+display:flex;
+gap:25px;
+flex-wrap:wrap;
+}
+
+.topbar-right a{
+color:#fff;
+margin-left:16px;
+transition:0.3s;
+}
+
+.topbar-right a:hover{
+color:#8bc34a;
+}
+
+header{
+position:fixed;
+width:100%;
+top:0;
+left:0;
+z-index:1000;
+padding:20px 8%;
+display:flex;
+align-items:center;
+justify-content:space-between;
+background:rgba(10,20,10,0.55);
+backdrop-filter:blur(14px);
+border-bottom:1px solid rgba(255,255,255,0.08);
+}
+
+.logo{
+font-size:34px;
+font-weight:700;
+text-decoration:none;
+color:#fff;
+letter-spacing:1px;
+}
+
+.logo span{
+color:#8bc34a;
+}
+
+nav a{
+text-decoration:none;
+color:#fff;
+margin-left:32px;
+font-weight:500;
+font-size:15px;
+position:relative;
+transition:0.3s;
+}
+
+nav a::after{
+content:'';
+position:absolute;
+left:0;
+bottom:-8px;
+width:0;
+height:2px;
+background:#8bc34a;
+transition:0.3s;
+}
+
+nav a:hover::after{
+width:100%;
+}
+
+.hero{
+height:100vh;
+background:
+linear-gradient(to right, rgba(0,0,0,0.78), rgba(0,0,0,0.45)),
+url('https://images.unsplash.com/photo-1500382017468-9049fed747ef');
+background-size:cover;
+background-position:center;
+display:flex;
+align-items:center;
+padding:0 8%;
+position:relative;
+}
+
+.hero-overlay-card{
+position:absolute;
+right:8%;
+bottom:90px;
+display:flex;
+flex-direction:column;
+gap:20px;
+z-index:2;
+}
+
+.mini-card{
+background:rgba(255,255,255,0.12);
+backdrop-filter:blur(14px);
+padding:28px;
+width:300px;
+border-radius:24px;
+border:1px solid rgba(255,255,255,0.1);
+box-shadow:0 10px 30px rgba(0,0,0,0.2);
+}
+
+.mini-card h3{
+color:#fff;
+margin-bottom:10px;
+font-size:22px;
+}
+
+.mini-card p{
+color:#d1d5db;
+line-height:1.7;
+}
+
+.hero::before{
+content:'';
+position:absolute;
+width:400px;
+height:400px;
+background:rgba(139,195,74,0.12);
+right:-120px;
+top:120px;
+border-radius:50%;
+filter:blur(10px);
+}
+
+.hero-content{
+max-width:780px;
+position:relative;
+z-index:2;
+}
+
+.hero-content .tag{
+display:inline-block;
+padding:10px 22px;
+background:rgba(255,255,255,0.12);
+border:1px solid rgba(255,255,255,0.15);
+border-radius:50px;
+color:#d7ffd9;
+font-size:14px;
+margin-bottom:25px;
+backdrop-filter:blur(10px);
+}
+
+.hero-content h1{
+font-size:78px;
+line-height:1.1;
+color:#fff;
+margin-bottom:28px;
+font-weight:700;
+}
+
+.hero-content p{
+font-size:18px;
+line-height:1.9;
+color:#e5e7eb;
+margin-bottom:40px;
+max-width:680px;
+}
+
+.hero-btns{
+display:flex;
+gap:20px;
+flex-wrap:wrap;
+}
+
+.btn{
+padding:16px 38px;
+border-radius:60px;
+text-decoration:none;
+font-weight:600;
+transition:0.4s;
+display:inline-flex;
+align-items:center;
+gap:10px;
+}
+
+.btn-primary{
+background:linear-gradient(135deg,#43a047,#1b5e20);
+color:#fff;
+box-shadow:0 10px 25px rgba(46,125,50,0.4);
+}
+
+.btn-primary:hover{
+transform:translateY(-5px);
+}
+
+.btn-outline{
+border:1px solid rgba(255,255,255,0.5);
+color:#fff;
+background:rgba(255,255,255,0.05);
+backdrop-filter:blur(10px);
+}
+
+.btn-outline:hover{
+background:#fff;
+color:#111;
+}
+
+.stats{
+margin-top:50px;
+display:flex;
+gap:40px;
+flex-wrap:wrap;
+}
+
+.stat-box h2{
+font-size:40px;
+color:#8bc34a;
+}
+
+.stat-box p{
+margin:0;
+font-size:15px;
+color:#d1d5db;
+}
+
+section{
+padding:110px 8%;
+}
+
+.section-title{
+text-align:center;
+margin-bottom:70px;
+}
+
+.section-title span{
+color:var(--primary);
+font-weight:600;
+letter-spacing:1px;
+text-transform:uppercase;
+font-size:14px;
+}
+
+.section-title h2{
+font-size:52px;
+margin-top:12px;
+color:#111827;
+}
+
+.section-title p{
+margin-top:18px;
+color:var(--text);
+font-size:17px;
+line-height:1.8;
+}
+
+.about-strip{
+margin-top:-80px;
+position:relative;
+z-index:5;
+padding:0 8%;
+}
+
+.about-wrapper{
+background:#fff;
+border-radius:30px;
+padding:40px;
+box-shadow:0 15px 45px rgba(0,0,0,0.1);
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:30px;
+}
+
+.about-box h3{
+font-size:40px;
+color:#2e7d32;
+margin-bottom:10px;
+}
+
+.about-box p{
+color:#6b7280;
+line-height:1.8;
+}
+
+.services-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:32px;
+}
+
+.service-card{
+background:#fff;
+padding:45px 35px;
+border-radius:28px;
+box-shadow:var(--shadow);
+position:relative;
+overflow:hidden;
+transition:0.5s;
+}
+
+.service-card:hover{
+transform:translateY(-12px);
+}
+
+.service-card::before{
+content:'';
+position:absolute;
+width:120px;
+height:120px;
+background:rgba(76,175,80,0.08);
+right:-30px;
+top:-30px;
+border-radius:50%;
+}
+
+.service-card i{
+width:75px;
+height:75px;
+background:linear-gradient(135deg,#43a047,#1b5e20);
+color:#fff;
+border-radius:20px;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:30px;
+margin-bottom:25px;
+box-shadow:0 10px 25px rgba(46,125,50,0.3);
+}
+
+.service-card h3{
+font-size:26px;
+margin-bottom:16px;
+}
+
+.service-card p{
+color:var(--text);
+line-height:1.9;
+}
+
+.features{
+background:linear-gradient(to bottom,#edf7ed,#f7faf7);
+}
+
+.feature-wrapper{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
+gap:30px;
+}
+
+.feature-box{
+background:#fff;
+padding:35px;
+border-radius:24px;
+box-shadow:var(--shadow);
+display:flex;
+gap:22px;
+transition:0.4s;
+}
+
+.feature-box:hover{
+transform:translateY(-8px);
+}
+
+.feature-box i{
+font-size:34px;
+color:var(--primary);
+margin-top:8px;
+}
+
+.feature-box h3{
+margin-bottom:12px;
+font-size:24px;
+}
+
+.feature-box p{
+line-height:1.8;
+color:var(--text);
+}
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:28px;
+}
+
+.gallery img{
+width:100%;
+height:360px;
+object-fit:cover;
+border-radius:28px;
+transition:0.5s;
+box-shadow:var(--shadow);
+}
+
+.gallery img:hover{
+transform:scale(1.03);
+}
+
+.contact{
+background:
+linear-gradient(rgba(0,0,0,0.78),rgba(0,0,0,0.78)),
+url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e');
+background-size:cover;
+background-position:center;
+text-align:center;
+color:#fff;
+position:relative;
+}
+
+.contact::before{
+content:'';
+position:absolute;
+width:350px;
+height:350px;
+background:rgba(76,175,80,0.12);
+left:-100px;
+bottom:-100px;
+border-radius:50%;
+}
+
+.contact-content{
+position:relative;
+z-index:2;
+}
+
+.contact h2{
+font-size:56px;
+margin-bottom:20px;
+}
+
+.contact p{
+font-size:18px;
+line-height:1.9;
+margin-bottom:10px;
+color:#e5e7eb;
+}
+
+.contact-info{
+margin:35px 0;
+}
+
+.contact-info div{
+margin-bottom:15px;
+font-size:20px;
+}
+
+.cta-section{
+padding:0 8% 100px;
+}
+
+.cta-box{
+background:linear-gradient(135deg,#1b5e20,#43a047);
+padding:70px;
+text-align:center;
+border-radius:35px;
+color:#fff;
+box-shadow:0 15px 45px rgba(46,125,50,0.35);
+}
+
+.cta-box h2{
+font-size:48px;
+margin-bottom:20px;
+}
+
+.cta-box p{
+font-size:18px;
+max-width:800px;
+margin:auto;
+line-height:1.9;
+margin-bottom:35px;
+color:#e5e7eb;
+}
+
+footer{
+background:#0f172a;
+padding:24px;
+text-align:center;
+color:#94a3b8;
+font-size:15px;
+}
+
+@media(max-width:991px){
+
+nav{
+display:none;
+}
+
+.hero-content h1{
+font-size:55px;
+}
+
+.section-title h2{
+font-size:40px;
+}
+
+}
+
+@media(max-width:1200px){
+
+.hero-overlay-card{
+display:none;
+}
+
+}
+
+@media(max-width:768px){
+
+.hero{
+text-align:center;
+justify-content:center;
+}
+
+.hero-content h1{
+font-size:42px;
+}
+
+.hero-btns{
+justify-content:center;
+}
+
+.stats{
+justify-content:center;
+}
+
+.contact h2{
+font-size:38px;
+}
+
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<a href="#" class="logo">Tatla <span>Agro</span></a>
+
+<nav>
+<a href="#home">Home</a>
+<a href="#services">Services</a>
+<a href="#features">Features</a>
+<a href="#gallery">Gallery</a>
+<a href="#contact">Contact</a>
+</nav>
+</header>
+
+<section class="hero" id="home">
+<div class="hero-overlay-card">
+<div class="mini-card">
+<h3>Luxury Rooftop Designs</h3>
+<p>Modern green spaces crafted with elegance.</p>
+</div>
+
+<div class="mini-card">
+<h3>Eco-Friendly Solutions</h3>
+<p>Sustainable terrace gardening concepts.</p>
+</div>
+</div>
+<div class="hero-content">
+<div class="tag">Premium Rooftop Landscaping Experts</div>
+<h1>Luxury Terrace Garden Solutions</h1>
+<p>
+Convert your terrace into a premium green paradise with modern rooftop landscaping, kitchen gardens, decorative greenery, vertical gardens, and relaxation spaces by Tatla Agro.
+</p>
+
+<div class="hero-btns">
+<a href="#services" class="btn btn-green">Explore Services</a>
+<a href="#contact" class="btn btn-outline">Get Consultation</a>
+</div>
+
+</div>
+</section>
+
+<section class="about-strip">
+<div class="about-wrapper">
+
+<div class="about-box">
+<h3>500+</h3>
+<p>Premium terrace garden projects completed successfully across residential and commercial spaces.</p>
+</div>
+
+<div class="about-box">
+<h3>10+</h3>
+<p>Years of landscaping and rooftop gardening expertise with innovative design solutions.</p>
+</div>
+
+<div class="about-box">
+<h3>100%</h3>
+<p>Client-focused execution with modern greenery concepts and premium finishing quality.</p>
+</div>
+
+</div>
+</section>
+
+<section id="services">
+
+<div class="section-title">
+<span>Our Services</span>
+<h2>Our Terrace Garden Services</h2>
+<p>Modern rooftop greenery solutions designed with elegance and sustainability.</p>
+</div>
+
+<div class="services-grid">
+
+<div class="service-card">
+<i class="fa-solid fa-seedling"></i>
+<h3>Rooftop Landscaping</h3>
+<p>Premium rooftop garden layouts with modern plantation styling and outdoor aesthetics.</p>
+</div>
+
+<div class="service-card">
+<i class="fa-solid fa-leaf"></i>
+<h3>Kitchen Garden</h3>
+<p>Organic vegetable and herb plantation systems for healthy and eco-friendly living.</p>
+</div>
+
+<div class="service-card">
+<i class="fa-solid fa-tree"></i>
+<h3>Vertical Garden</h3>
+<p>Decorative green walls and vertical plantation systems for compact terrace spaces.</p>
+</div>
+
+<div class="service-card">
+<i class="fa-solid fa-water"></i>
+<h3>Irrigation Setup</h3>
+<p>Advanced drip irrigation systems ensuring efficient watering and healthy plant growth.</p>
+</div>
+
+<div class="service-card">
+<i class="fa-solid fa-couch"></i>
+<h3>Relaxation Garden</h3>
+<p>Stylish seating zones with pergola greenery, mood lighting, and natural ambience.</p>
+</div>
+
+<div class="service-card">
+<i class="fa-solid fa-border-all"></i>
+<h3>Artificial Grass</h3>
+<p>Luxury artificial turf installation for premium low-maintenance rooftop spaces.</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="features" id="features">
+
+<div class="section-title">
+<span>Why Choose Us</span>
+<h2>Why Choose Our Terrace Gardens</h2>
+<p>Professional rooftop greenery solutions for modern homes and commercial properties.</p>
+</div>
+
+<div class="feature-box">
+<i class="fa-solid fa-star"></i>
+<div>
+<h3>Decorative Premium Design</h3>
+<p>Designer pots, ornamental plants, decorative pebbles, lighting, and modern rooftop styling.</p>
+</div>
+</div>
+
+<div class="feature-box">
+<i class="fa-solid fa-carrot"></i>
+<div>
+<h3>Organic Kitchen Gardening</h3>
+<p>Grow fresh vegetables like tomato, chili, mint, coriander, spinach, and herbs naturally.</p>
+</div>
+</div>
+
+<div class="feature-box">
+<i class="fa-solid fa-wind"></i>
+<div>
+<h3>Natural Cooling & Freshness</h3>
+<p>Reduce terrace heat, improve air quality, and create a peaceful outdoor environment.</p>
+</div>
+</div>
+
+<div class="feature-box">
+<i class="fa-solid fa-earth-asia"></i>
+<div>
+<h3>Eco-Friendly Green Roof</h3>
+<p>Sustainable green roof systems improving energy efficiency and environmental performance.</p>
+</div>
+</div>
+
+</section>
+
+<section id="gallery">
+
+<div class="section-title">
+<span>Project Gallery</span>
+<h2>Terrace Garden Gallery</h2>
+<p>Beautiful rooftop greenery crafted with modern landscaping concepts.</p>
+</div>
+
+<div class="gallery">
+<img src="https://images.unsplash.com/photo-1494526585095-c41746248156">
+<img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef">
+<img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e">
+</div>
+
+</section>
+
+<section class="cta-section">
+<div class="cta-box">
+<h2>Let's Build Your Dream Terrace Garden</h2>
+<p>Luxury rooftop landscaping designed with greenery, elegance, and modern outdoor living concepts.</p>
+<a href="#contact" class="btn btn-primary">Book Free Consultation</a>
+</div>
+</section>
+
+<section class="contact" id="contact">
+<div class="contact-content">
+
+<h2>Contact Tatla Agro</h2>
+<p>Premium Terrace Garden & Rooftop Landscaping Services</p>
+
+<br>
+
+<p><i class="fa-solid fa-phone"></i> 7878800305</p>
+<p><i class="fa-solid fa-envelope"></i> tatlaagro@gmail.com</p>
+
+<br>
+
+<a href="index.html" class="btn btn-green">Back To Home</a>
+
+</div>
+</section>
+
+<footer>
+© 2026 Tatla Agro | All Rights Reserved
+</footer>
+
+</body>
+</html>
